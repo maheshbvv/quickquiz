@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+/* Nessie Design System Colors */
+:root {
+  /* Primary Colors */
+  --ns-primary-blue: #0063D3;
+  --ns-dark-blue: #003082;
+  --ns-accent-yellow: #FFC917;
+  
+  /* Neutral Colors */
+  --ns-white: #FFFFFF;
+  --ns-gray-50: #F7F7F9;
+  --ns-gray-100: #F0F1F3;
+  --ns-gray-200: #E4E5E8;
+  --ns-gray-300: #C4C5CB;
+  --ns-gray-400: #75767C;
+  --ns-gray-500: #252528;
+  
+  /* Status Colors */
+  --ns-success: #2E7D32;
+  --ns-warning: #F57C00;
+  --ns-error: #D32F2F;
+  --ns-info: #1976D2;
+  
+  /* Typography */
+  --ns-font-sans: "NS Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  
+  /* Spacing */
+  --ns-space-xs: 4px;
+  --ns-space-sm: 8px;
+  --ns-space-md: 16px;
+  --ns-space-lg: 24px;
+  --ns-space-xl: 32px;
+  --ns-space-2xl: 48px;
+  
+  /* Border Radius */
+  --ns-radius-sm: 4px;
+  --ns-radius-md: 8px;
+  --ns-radius-lg: 12px;
+  --ns-radius-xl: 16px;
+  
+  /* Shadows */
+  --ns-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --ns-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --ns-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Load NS Sans font */
+@font-face {
+  font-family: "NS Sans";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://ns-font.netlify.app/assets/fonts/nssans-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NS Sans";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://ns-font.netlify.app/assets/fonts/nssans-demi.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "NS Sans";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://ns-font.netlify.app/assets/fonts/nssans-bold.woff2") format("woff2");
+}
+
+/* Base Styles */
+body {
+  background: var(--ns-white);
+  color: var(--ns-gray-500);
+  font-family: var(--ns-font-sans);
+  line-height: 1.5;
+}
+
+/* Nessie Component Styles */
+.ns-card {
+  background: var(--ns-white);
+  border: 1px solid var(--ns-gray-200);
+  border-radius: var(--ns-radius-md);
+  box-shadow: var(--ns-shadow-sm);
+  padding: var(--ns-space-lg);
+}
+
+.ns-card-hover:hover {
+  box-shadow: var(--ns-shadow-md);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.ns-button-primary {
+  background: var(--ns-primary-blue);
+  color: var(--ns-white);
+  border: none;
+  border-radius: var(--ns-radius-md);
+  padding: var(--ns-space-sm) var(--ns-space-md);
+  font-family: var(--ns-font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ns-button-primary:hover {
+  background: #0052B3;
+}
+
+.ns-button-secondary {
+  background: var(--ns-white);
+  color: var(--ns-primary-blue);
+  border: 1px solid var(--ns-primary-blue);
+  border-radius: var(--ns-radius-md);
+  padding: var(--ns-space-sm) var(--ns-space-md);
+  font-family: var(--ns-font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.ns-button-secondary:hover {
+  background: var(--ns-primary-blue);
+  color: var(--ns-white);
+}
+
+.ns-input {
+  background: var(--ns-white);
+  border: 1px solid var(--ns-gray-200);
+  border-radius: var(--ns-radius-md);
+  padding: var(--ns-space-sm) var(--ns-space-md);
+  font-family: var(--ns-font-sans);
+  font-size: 16px;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.ns-input:focus {
+  outline: none;
+  border-color: var(--ns-primary-blue);
+  box-shadow: 0 0 0 2px rgba(0, 99, 211, 0.2);
+}
+
+.ns-heading-1 {
+  font-family: var(--ns-font-sans);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--ns-dark-blue);
+  line-height: 1.2;
+}
+
+.ns-heading-2 {
+  font-family: var(--ns-font-sans);
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--ns-dark-blue);
+  line-height: 1.3;
+}
+
+.ns-heading-3 {
+  font-family: var(--ns-font-sans);
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--ns-dark-blue);
+  line-height: 1.4;
+}
+
+.ns-body-text {
+  font-family: var(--ns-font-sans);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--ns-gray-500);
+  line-height: 1.5;
+}
+
+.ns-caption {
+  font-family: var(--ns-font-sans);
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--ns-gray-400);
+  line-height: 1.4;
+}
+
+/* Utility Classes */
+.bg-ns-primary { background-color: var(--ns-primary-blue); }
+.bg-ns-primary-dark { background-color: var(--ns-dark-blue); }
+.bg-ns-accent { background-color: var(--ns-accent-yellow); }
+.bg-ns-white { background-color: var(--ns-white); }
+.bg-ns-gray-50 { background-color: var(--ns-gray-50); }
+.bg-ns-gray-100 { background-color: var(--ns-gray-100); }
+
+.text-ns-primary { color: var(--ns-primary-blue); }
+.text-ns-primary-dark { color: var(--ns-dark-blue); }
+.text-ns-accent { color: var(--ns-accent-yellow); }
+.text-ns-white { color: var(--ns-white); }
+.text-ns-gray-500 { color: var(--ns-gray-500); }
+.text-ns-gray-400 { color: var(--ns-gray-400); }
+
+.border-ns-primary { border-color: var(--ns-primary-blue); }
+.border-ns-gray-200 { border-color: var(--ns-gray-200); }

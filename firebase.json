@@ -1,0 +1,69 @@
+{
+  "hosting": {
+    "public": "out",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "headers": [
+      {
+        "source": "**/*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.css",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=0, must-revalidate"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/admin",
+        "destination": "/admin/index.html"
+      },
+      {
+        "source": "/admin/dashboard",
+        "destination": "/admin/dashboard/index.html"
+      },
+      {
+        "source": "/admin/dashboard/**",
+        "destination": "/admin/dashboard/index.html"
+      },
+      {
+        "source": "/admin/results",
+        "destination": "/admin/results/index.html"
+      },
+      {
+        "source": "/admin/**",
+        "destination": "/admin/index.html"
+      },
+      {
+        "source": "/quiz",
+        "destination": "/quiz/index.html"
+      },
+      {
+        "source": "/quiz/**",
+        "destination": "/quiz/index.html"
+      }
+    ]
+  }
+}

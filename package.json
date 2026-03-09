@@ -1,0 +1,39 @@
+{
+  "name": "quickquiz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "export": "next build",
+    "deploy": "next build && firebase deploy --only hosting",
+    "deploy:preview": "next build && firebase hosting:channel:deploy preview"
+  },
+  "dependencies": {
+    "@convex-dev/auth": "^0.0.91",
+    "@firebase/auth": "^1.12.1",
+    "convex": "^1.32.0",
+    "date-fns": "^4.1.0",
+    "firebase": "^12.10.0",
+    "jspdf": "^4.2.0",
+    "jspdf-autotable": "^5.0.7",
+    "lucide-react": "^0.577.0",
+    "next": "16.1.6",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-firebase-hooks": "^5.1.1",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
